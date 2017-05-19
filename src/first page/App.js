@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './first page/style.css'
+import './style.css'
 import './css/normalize.css'
 import './css/flexboxgrid.css'
 

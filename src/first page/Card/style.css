@@ -34,3 +34,11 @@
   background-image: linear-gradient(107deg, #0c09bf, #966dd8);
   color: #fff;
 }
+
+
+.sale{
+  position: absolute;
+  left: 219px;
+  top: 17px;
+  width: 76px;
+}
