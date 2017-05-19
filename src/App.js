@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './css/style.css'
+import './style.css'
 import './css/normalize.css'
 import './css/flexboxgrid.css'
 
@@ -9,8 +9,8 @@ import Itemimg_2 from './images/bitmap1.jpg'
 import Itemimg_3 from './images/bitmap2.jpg'
 
 import Sidebar from './Sidebar'
-import Toppanel from './Top_panel'
-import Card from './Card'
+import Toppanel from './first page/TopPanel'
+import Card from './first page/Card'
 
 class App extends Component {
   render() {
@@ -39,11 +39,11 @@ class App extends Component {
               <div className="col-4">
                 <span className="sale">sale</span>
                 <img className="item-image" src={Itemimg_3} alt="item-img" />
-                <a href="#" className="item-price-sale">$170</a>
+                <a href="" className="item-price-sale">$170</a>
               </div>
               <div className="col-4">
                 <img className="item-image" src={Itemimg_1} alt="item-img" />
-                <a href="#" className="item-price">$170 </a>
+                <a href="" className="item-price">$170 </a>
               </div>
             </div>
           </section>
