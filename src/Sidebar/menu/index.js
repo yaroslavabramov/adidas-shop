@@ -1,9 +1,7 @@
 import React from 'react'
 
-import '../css/menu.css'
-import '../css/style.css'
-import '../css/normalize.css'
-import '../css/flexboxgrid.css'
+import './style.css'
+
 import Arrow from './images/group-2.svg'
 
 export default ()=> {

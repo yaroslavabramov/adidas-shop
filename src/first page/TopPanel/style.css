@@ -1,0 +1,63 @@
+.top-panel{
+  box-sizing: border-box;
+  margin:0;
+  width: 1025px;
+  padding-left: 25px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-bottom: 3px solid #e7e7e7;
+  display: flex;
+  align-items:center;
+}
+
+.top-panel-icon{
+  height: 55px;
+  width: 55px;
+  background-image: url(./images/filter.png);
+  background-repeat: no-repeat;
+  background-position: 8px 11px;
+  background-color: #ebebeb;
+}
+
+.top-panel-sex{
+  margin-left: 20px;
+}
+
+.sex, .sex-current{
+  padding:0;
+  margin-left: 10px;
+  font-family: AvenirNextBold;
+  font-size: 24px;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+}
+
+.sex-current, .size-button-current{
+  color: #4d42f8;
+}
+
+.sex, .size-button{
+ color: #d6d6d6;
+}
+
+.size{
+ margin-left: 50px;
+ margin-right: 18px;
+ color: #4d42f8
+}
+
+.size-buttons{
+ width: 254px;
+ display: flex;
+ justify-content: space-between;
+}
+
+.size, .size-button, .size-button-current{
+ padding: 0;
+ font-family: AvenirNextBold;
+ font-size: 24px;
+ text-transform: uppercase;
+ border: none;
+ background: none;
+}

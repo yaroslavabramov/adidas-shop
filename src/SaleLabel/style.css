@@ -1,0 +1,14 @@
+.sale{
+  position: absolute;
+  left: 219px;
+  top: 17px;
+  width: 76px;
+  color: #fff;
+  font-family: AvenirNextBold;
+  font-size: 14px;
+  background-color: #ff5c5c;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+  text-align: center;
+}

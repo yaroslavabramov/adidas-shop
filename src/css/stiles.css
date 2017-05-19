@@ -1,0 +1,77 @@
+.shoes{
+  width: 1025px;
+}
+
+.catalog{
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 1025px;
+}
+.row{
+  padding-left: 25px;
+  display: flex;
+  margin-top: 22px;
+  margin-bottom: 2px;
+}
+
+.col-4{
+  margin-right: 24px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.sale{
+  position: absolute;
+  left: 219px;
+  top: 17px;
+  width: 76px;
+  color: #fff;
+  font-family: AvenirNextBold;
+  font-size: 14px;
+  background-color: #ff5c5c;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.item-image{
+  height: 197px;
+  width: 294px;
+}
+
+.item-price, .item-price-sale{
+  font-size: 30px;
+  font-family: AvenirNextBold;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  margin-top: 6px;
+  height: 91px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-price{
+  background-color: #fff;
+  color: #111;
+}
+
+.item-price-sale{
+  background-image: linear-gradient(107deg, #0c09bf, #966dd8);
+  color: #fff;
+}
+
+button{
+  cursor: pointer;
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+}
