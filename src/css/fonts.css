@@ -19,34 +19,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-body{
-  margin: 0;
-  padding:0;
-  display: flex;
-}
-
-.ultraboost{
-  width: 1025px;
-  display: flex;
-  flex-flow: column;
-}
-
-.ultraboost-header{
-  width: inherit;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  margin-top: 25px;
-}
-
-button{
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
-
-a{
-  text-decoration: none;
-  outline: none;
-}

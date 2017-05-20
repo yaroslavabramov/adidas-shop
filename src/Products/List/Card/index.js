@@ -4,7 +4,7 @@ import './style.css'
 
 import Itemimg from './images/bitmap1.jpg'
 
-import SaleLabel from '../../SaleLabel'
+import SaleLabel from '../../../Components/SaleLabel'
 
 export default ()=> {
   return(

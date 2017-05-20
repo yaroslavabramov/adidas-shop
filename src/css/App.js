@@ -4,18 +4,16 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-
-import './css/fonts.css'
-import CatalogPage from './Products/List'
-import ItemPage from './Products/Show'
+import CatalogPage from './catalog page'
+import ItemPage from './item page'
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={CatalogPage} />
-          <Route exact path="/item" component={ItemPage} />
+          <Route exact path="/item" component={CatalogPage} />
+          <Route exact path="/" component={ItemPage} />
         </div>
       </Router>
     );

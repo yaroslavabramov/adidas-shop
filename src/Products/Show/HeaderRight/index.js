@@ -2,7 +2,7 @@ import React from 'react'
 
 import './style.css'
 
-import SaleLabel from '../../SaleLabel'
+import SaleLabel from '../../../Components/SaleLabel'
 
 export default ()=> {
   return(
