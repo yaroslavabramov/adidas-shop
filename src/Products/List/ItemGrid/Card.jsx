@@ -41,12 +41,12 @@ const Label = styled.div`
   right: 17px;
 `;
 
-function Card({ price, photo, sale }) {
+function Card({ price, photo, isSale }) {
   return (
     <CardWrapper>
-      {sale && <Label><SaleLabel /></Label>}
+      {isSale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      {sale ? <Price to="/item" isSale>${price}</Price> : <Price to="/item">${price}</Price>}
+      {isSale ? <Price to="/item" isSale>${price}</Price> : <Price to="/item">${price}</Price>}
     </CardWrapper>
   );
 }
@@ -54,11 +54,11 @@ function Card({ price, photo, sale }) {
 Card.propTypes = {
   price: PropTypes.string.isRequired,
   photo: PropTypes.element.isRequired,
-  sale: PropTypes.bool,
+  isSale: PropTypes.bool,
 };
 
 Card.defaultProps = {
-  sale: false,
+  isSale: false,
 };
 
 export default Card;

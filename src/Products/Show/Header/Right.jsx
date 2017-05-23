@@ -6,7 +6,12 @@ const Wrapper = styled.div`
   margin-right: 30px;
 `;
 
-const ColorMenu = styled.div`
+const TopRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const ColorMenu = styled.span`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -39,13 +44,15 @@ const Label = styled.span`
 
 export default () => (
   <Wrapper>
-    <ColorMenu>
-      <Color color="#c5c5c5" />
-      <Color color="#4d87ca" />
-      <Color color="#4a4a4a" />
-      <Color color="#e0e0e0" />
+    <TopRow>
+      <ColorMenu>
+        <Color color="#c5c5c5" />
+        <Color color="#4d87ca" />
+        <Color color="#4a4a4a" />
+        <Color color="#e0e0e0" />
+      </ColorMenu>
       <Label><Sale /></Label>
-    </ColorMenu>
+    </TopRow>
     <Price>170$</Price>
   </Wrapper>
 );

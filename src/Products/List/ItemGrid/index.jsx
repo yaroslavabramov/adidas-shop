@@ -17,7 +17,7 @@ export default () => (
   <GridWrapper>
     <Row>
       <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg1} sale />
+        <Card price="170" photo={Itemimg1} isSale />
       </Col>
       <Col xs={12} sm={6} md={4} lg={3}>
         <Card price="240.99" photo={Itemimg2} />
@@ -29,13 +29,13 @@ export default () => (
         <Card price="170" photo={Itemimg2} />
       </Col>
       <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg3} sale />
+        <Card price="170" photo={Itemimg3} isSale />
       </Col>
       <Col xs={12} sm={6} md={4} lg={3}>
         <Card price="170" photo={Itemimg1} />
       </Col>
       <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg1} sale />
+        <Card price="170" photo={Itemimg1} isSale />
       </Col>
       <Col xs={12} sm={6} md={4} lg={3}>
         <Card price="170" photo={Itemimg1} />

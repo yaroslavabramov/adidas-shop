@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from './images/group.png';
+import Icon from './images/group.png';
 
 const Wrapper = styled.div`
   margin-top:144px;
   margin-left: 22px;
   margin-right: 22px;
-  background-image: url(${Logo});
+  background-image: url(${Icon});
   background-repeat: no-repeat;
   background-position: 14px 0px;
   background-size: 28px 30px;
