@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -41,26 +41,24 @@ const Label = styled.div`
   right: 17px;
 `;
 
-function Card ({price, photo, sale}) {
-  return(
+function Card({ price, photo, sale }) {
+  return (
     <CardWrapper>
-      {sale &&  <Label><SaleLabel /></Label> }
+      {sale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      {sale ?
-      <Price to="/item" isSale='true' >${price}</Price> :
-      <Price to="/item" >${price}</Price> }
+      {sale ? <Price to="/item" isSale>${price}</Price> : <Price to="/item">${price}</Price>}
     </CardWrapper>
   );
-};
+}
 
 Card.propTypes = {
   price: PropTypes.string.isRequired,
   photo: PropTypes.element.isRequired,
-  sale: PropTypes.bool
+  sale: PropTypes.bool,
 };
 
 Card.defaultProps = {
-  sale: false
+  sale: false,
 };
 
 export default Card;

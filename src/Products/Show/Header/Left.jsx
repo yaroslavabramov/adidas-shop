@@ -32,11 +32,9 @@ const Save = styled.button`
   }
 `;
 
-export default ()=> {
-  return(
-      <Wrapper>
-        <Name>ultra boost</Name>
-        <Save>save</Save>
-      </Wrapper>
-  );
-};
+export default () => (
+  <Wrapper>
+    <Name>ultra boost</Name>
+    <Save>save</Save>
+  </Wrapper>
+);

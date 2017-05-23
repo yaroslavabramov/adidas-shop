@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Form = styled.form`
   margin-top:144px;
-  background-image: url(${require('./images/group.png')});
+  background-image: url($ {require('./images/group.png')});
   background-repeat: no-repeat;
   background-position: 14px 0px;
   background-size: 28px 30px;
@@ -27,10 +27,8 @@ const Input = styled.input`
   -webkit-appearance: none;
 `;
 
-export default ()=> {
-  return(
-    <Form action="URL">
-      <Input type="text" />
-    </Form>
-  );
-};
+export default () => (
+  <Form action="URL">
+    <Input type="text" />
+  </Form>
+);

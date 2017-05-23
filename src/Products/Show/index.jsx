@@ -21,16 +21,14 @@ const Header = styled.header`
   margin-top: 25px;
 `;
 
-export default ()=> {
-  return (
-    <Wrapper>
-      <Header>
-        <HeaderLeft />
-        <HeaderRight />
-      </Header>
-      <PhotoGallery />
-      <Description />
+export default () => (
+  <Wrapper>
+    <Header>
+      <HeaderLeft />
+      <HeaderRight />
+    </Header>
+    <PhotoGallery />
+    <Description />
     <BuyNow />
   </Wrapper>
-  );
-};
+);

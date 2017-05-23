@@ -17,17 +17,15 @@ const Panel = styled.div`
 const Icon = styled.div`
   height: 55px;
   min-width: 55px;
-  background-image: url(${require('./images/filter.png')});
+  background-image: url($ {require('./images/filter.png')});
   background-repeat: no-repeat;
   background-position: 8px 11px;
   background-color: #ebebeb;
 `;
 
-export default ()=> {
-  return(
-    <Panel>
-      <Icon />
-      <Filters />
-    </Panel>
-  );
-};
+export default () => (
+  <Panel>
+    <Icon />
+    <Filters />
+  </Panel>
+);

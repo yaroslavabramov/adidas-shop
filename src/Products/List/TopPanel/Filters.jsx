@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const Filters = styled.div`
@@ -40,23 +40,21 @@ const Button = styled.button`
     color: #111;
   }
 `;
-export default ()=> {
-  return(
-    <Filters>
-      <SexFilter>
-        <Button isActive >man</Button>
-        <Button>woman</Button>
-      </SexFilter>
-      <SizeLabel>size</SizeLabel>
-      <SizeFilter>
-        <Button>36</Button>
-        <Button>37</Button>
-        <Button>38</Button>
-        <Button>39</Button>
-        <Button>40</Button>
-        <Button isActive='true' >41</Button>
-        <Button>42</Button>
-      </SizeFilter>
-    </Filters>
-  );
-};
+export default () => (
+  <Filters>
+    <SexFilter>
+      <Button isActive>man</Button>
+      <Button>woman</Button>
+    </SexFilter>
+    <SizeLabel>size</SizeLabel>
+    <SizeFilter>
+      <Button>36</Button>
+      <Button>37</Button>
+      <Button>38</Button>
+      <Button>39</Button>
+      <Button>40</Button>
+      <Button isActive>41</Button>
+      <Button>42</Button>
+    </SizeFilter>
+  </Filters>
+);

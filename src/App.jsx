@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './css/fonts.css';
@@ -15,18 +15,16 @@ const Page = styled.div`
   display: flex;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Page>
-          <Sidebar />
-          <Route exact path="/" component={List} />
-          <Route exact path="/item" component={Show} />
-        </Page>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Page>
+        <Sidebar />
+        <Route exact path="/" component={List} />
+        <Route exact path="/item" component={Show} />
+      </Page>
+    </Router>
+  );
 }
 
 export default App;
