@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 `;
 
 const Name = styled.h1`
-  width: 226px;
+  max-width: 300px;
   color: #393939;
   text-transform: uppercase;
   font-family: AvenirNextbold;

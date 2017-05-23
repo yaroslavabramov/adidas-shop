@@ -36,46 +36,14 @@ const PhotoButton = styled.button`
   border: none;
   outline: none;
   ${props => props.isActive && `
-      margin-right: 20px;
-      margin-left: 5px;
-      border: 5px solid #e7e7e7;
-    `};
+    border: 5px solid #e7e7e7;
+  `};
 `;
 
 const Img = styled.img`
   max-width: 180px;
   width: 100%;
   height: 100%;
-`;
-
-const Lines = styled.div`
-  margin: 0 15px;
-  flex: 1 1 159px;
-`;
-
-const Line = styled.hr`
-  height: 3px;
-  margin: 3px 0;
-  background-color: #e7e7e7;
-  border-radius: 1.5px;
-  border: none;
-`;
-
-const SeeMore = styled.button`
-  padding:0;
-  max-width: 45px;
-  max-height: 57px;
-  background: none;
-  border: none;
-  text-align: left;
-  font-family: AvenirNextReg;
-  font-size: 14px;
-  color: #c0c0c0;
-  margin-left: 10px;
-  &:hover{
-    color: #828282;
-    font-size: 1em;
-  }
 `;
 
 export default () => (
@@ -86,12 +54,7 @@ export default () => (
       <PhotoButton><Img src={Linkimg2} alt="" /></PhotoButton>
       <PhotoButton><Img src={Linkimg3} alt="" /></PhotoButton>
       <PhotoButton isActive><Img src={Linkimg4} alt="" /></PhotoButton>
-      <Lines>
-        <Line />
-        <Line />
-        <Line />
-      </Lines>
-      <SeeMore>see more photos</SeeMore>
+      <PhotoButton><Img src={Linkimg2} alt="" /></PhotoButton>
     </Menu>
   </Gallery>
 );

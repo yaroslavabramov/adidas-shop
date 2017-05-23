@@ -2,14 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './images/group.png';
 
-const Form = styled.form`
+const Wrapper = styled.div`
   margin-top:144px;
+  margin-left: 22px;
+  margin-right: 22px;
   background-image: url(${Logo});
   background-repeat: no-repeat;
   background-position: 14px 0px;
   background-size: 28px 30px;
-  margin-left: 22px;
-  margin-right: 22px;
+`;
+
+const Form = styled.form`
   padding-left: 60px;
   padding-top: 2px;
   padding-bottom: 12px;
@@ -29,7 +32,9 @@ const Input = styled.input`
 `;
 
 export default () => (
-  <Form action="URL">
-    <Input type="text" />
-  </Form>
+  <Wrapper>
+    <Form action="URL">
+      <Input type="text" />
+    </Form>
+  </Wrapper>
 );

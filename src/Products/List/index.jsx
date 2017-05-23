@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Toppanel from './TopPanel';
-import Catalog from './Catalog';
+import TopPanel from './TopPanel';
+import ItemGrid from './ItemGrid';
 
 const Wrapper = styled.main`
   width: calc(100% - 414px);
@@ -10,7 +10,7 @@ const Wrapper = styled.main`
 
 export default () => (
   <Wrapper>
-    <Toppanel />
-    <Catalog />
+    <TopPanel />
+    <ItemGrid />
   </Wrapper>
 );

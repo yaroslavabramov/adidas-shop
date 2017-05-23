@@ -2,30 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Filters = styled.div`
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 `;
 
 const SexFilter = styled.div`
-    margin-left: 30px;
-    width: 180px;
-    display: flex;
-    justify-content: space-between;
+  margin-left: 30px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const SizeFilter = styled.div`
-    width: 254px;
-    display: flex;
-    justify-content: space-between;
+  width: 254px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const SizeLabel = styled.span`
-   margin-left: 50px;
-   margin-right: 18px;
-   color: #4d42f8;
-   font-family: AvenirNextBold;
-   font-size: 24px;
-   text-transform: uppercase;
+  margin-left: 50px;
+  margin-right: 18px;
+  color: #4d42f8;
+  font-family: AvenirNextBold;
+  font-size: 24px;
+  text-transform: uppercase;
 `;
 
 const Button = styled.button`
