@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Arrow from './images/group-2.svg';
 
 const Nav = styled.nav`
   display:flex;
@@ -20,7 +21,7 @@ const Menu = styled(Link)`
   ${props => props.isActive && `
     padding-right: 20px;
     margin-left: 10px;
-    background-image: url($ {require('./images/group-2.svg')});
+    background-image: url(${Arrow});
     background-repeat: no-repeat;
     background-position: 100px 10px;
     margin-bottom: 15px;

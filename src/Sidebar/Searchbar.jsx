@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logo from './images/group.png';
 
 const Form = styled.form`
   margin-top:144px;
-  background-image: url($ {require('./images/group.png')});
+  background-image: url(${Logo});
   background-repeat: no-repeat;
   background-position: 14px 0px;
   background-size: 28px 30px;
