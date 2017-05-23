@@ -19,8 +19,4 @@ const BuyNow = styled.button`
   }
 `;
 
-export default ()=> {
-  return(
-        <BuyNow>buy now</BuyNow>
-  );
-};
+export default () => <BuyNow>buy now</BuyNow>;

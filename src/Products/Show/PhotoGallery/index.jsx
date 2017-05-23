@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Linkimg_1 from './images/link1@3x.jpg';
-import Linkimg_2 from './images/link2@3x.jpg';
-import Linkimg_3 from './images/link3@3x.jpg';
-import Linkimg_4 from './images/bitmap1.jpg';
+import Linkimg1 from './images/link1@3x.jpg';
+import Linkimg2 from './images/link2@3x.jpg';
+import Linkimg3 from './images/link3@3x.jpg';
+import Linkimg4 from './images/bitmap1.jpg';
 import Itemphoto from './images/bitmap1@3x.jpg';
 
 const Gallery = styled.div`
@@ -78,22 +78,20 @@ const SeeMore = styled.button`
   }
 `;
 
-export default ()=> {
-  return(
-    <Gallery>
-      <Current src={Itemphoto} alt='item img' />
-      <Menu>
-        <PhotoButton><Img src={Linkimg_1} alt='' /></PhotoButton>
-        <PhotoButton><Img src={Linkimg_2} alt='' /></PhotoButton>
-        <PhotoButton><Img src={Linkimg_3} alt='' /></PhotoButton>
-        <PhotoButton isActive ><Img src={Linkimg_4} alt='' /></PhotoButton>
-        <Lines>
-          <Line />
-          <Line />
-          <Line />
-        </Lines>
-        <SeeMore>see more photos</SeeMore>
-      </Menu>
-    </Gallery>
-  );
-};
+export default () => (
+  <Gallery>
+    <Current src={Itemphoto} alt="item img" />
+    <Menu>
+      <PhotoButton><Img src={Linkimg1} alt="" /></PhotoButton>
+      <PhotoButton><Img src={Linkimg2} alt="" /></PhotoButton>
+      <PhotoButton><Img src={Linkimg3} alt="" /></PhotoButton>
+      <PhotoButton isActive><Img src={Linkimg4} alt="" /></PhotoButton>
+      <Lines>
+        <Line />
+        <Line />
+        <Line />
+      </Lines>
+      <SeeMore>see more photos</SeeMore>
+    </Menu>
+  </Gallery>
+);

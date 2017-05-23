@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Filters from './Filters';
+import Logo from './images/filter.png';
 
 const Panel = styled.div`
   box-sizing: border-box;
@@ -17,17 +18,15 @@ const Panel = styled.div`
 const Icon = styled.div`
   height: 55px;
   min-width: 55px;
-  background-image: url(${require('./images/filter.png')});
+  background-image: url(${Logo});
   background-repeat: no-repeat;
   background-position: 8px 11px;
   background-color: #ebebeb;
 `;
 
-export default ()=> {
-  return(
-    <Panel>
-      <Icon />
-      <Filters />
-    </Panel>
-  );
-};
+export default () => (
+  <Panel>
+    <Icon />
+    <Filters />
+  </Panel>
+);

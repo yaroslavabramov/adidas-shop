@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Arrow from './images/group-2.svg';
 
 const Nav = styled.nav`
   display:flex;
@@ -20,7 +21,7 @@ const Menu = styled(Link)`
   ${props => props.isActive && `
     padding-right: 20px;
     margin-left: 10px;
-    background-image: url(${require('./images/group-2.svg')});
+    background-image: url(${Arrow});
     background-repeat: no-repeat;
     background-position: 100px 10px;
     margin-bottom: 15px;
@@ -39,15 +40,13 @@ const SubMenu = styled(Link)`
   }
 `;
 
-export default ()=> {
-  return(
-    <Nav>
-      <Menu to="/item" isActive >sports</Menu>
-      <SubMenu to="/item" isActive >shoes</SubMenu>
-      <SubMenu to="/item" >clothing</SubMenu>
-      <SubMenu to="/item" >accesories</SubMenu>
-      <Menu to="/item">brands</Menu>
-      <Menu to="/item">micoach</Menu>
-    </Nav>
-  );
-};
+export default () => (
+  <Nav>
+    <Menu to="/item" isActive>sports</Menu>
+    <SubMenu to="/item" isActive>shoes</SubMenu>
+    <SubMenu to="/item">clothing</SubMenu>
+    <SubMenu to="/item">accesories</SubMenu>
+    <Menu to="/item">brands</Menu>
+    <Menu to="/item">micoach</Menu>
+  </Nav>
+);

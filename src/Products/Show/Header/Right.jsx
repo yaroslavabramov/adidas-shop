@@ -37,17 +37,15 @@ const Label = styled.span`
   margin-left: 30px;
 `;
 
-export default ()=> {
-  return(
-      <Wrapper>
-        <ColorMenu>
-          <Color color='#c5c5c5' />
-          <Color color='#4d87ca' />
-          <Color color='#4a4a4a' />
-          <Color color='#e0e0e0' />
-          <Label><Sale /></Label>
-        </ColorMenu>
-        <Price>170$</Price>
-      </Wrapper>
-  );
-};
+export default () => (
+  <Wrapper>
+    <ColorMenu>
+      <Color color="#c5c5c5" />
+      <Color color="#4d87ca" />
+      <Color color="#4a4a4a" />
+      <Color color="#e0e0e0" />
+      <Label><Sale /></Label>
+    </ColorMenu>
+    <Price>170$</Price>
+  </Wrapper>
+);

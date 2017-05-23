@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const SaleLabel = styled.div`
   color: #fff;
@@ -14,9 +14,4 @@ const SaleLabel = styled.div`
   display: flex;
 `;
 
-
-export default ()=> {
-  return(
-      <SaleLabel>sale</SaleLabel>
-  );
-};
+export default () => <SaleLabel>sale</SaleLabel>;
