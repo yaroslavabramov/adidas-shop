@@ -1,0 +1,77 @@
+import React from 'react';
+import styled from 'styled-components';
+import Sale from '../../../Components/SaleLabel';
+
+const Wrapper = styled.div`
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 768px){
+    flex-direction: column;
+    margin-right: 30px;
+  }
+`;
+
+const TopRow = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
+`;
+
+const ColorMenu = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const Color = styled.button`
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  margin-left: 13px;
+  background-color: ${props => props.color};
+`;
+
+const Price = styled.h2`
+  margin: 0px 0 15px 15px;
+  text-align: left;
+  font-family: AvenirNextBold;
+  font-size: 80px;
+  height: 80px;
+  color: #e3e3e3;
+  border: none;
+  outline: none;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    height: 109px;
+    margin-top: 20px;
+    text-align: right;
+  }
+`;
+
+const Label = styled.span`
+  margin-left: 15px;
+  @media screen and (min-width: 768px){
+    margin-left: 30px;
+  }
+`;
+
+export default () => (
+  <Wrapper>
+    <TopRow>
+      <ColorMenu>
+        <Color color="#c5c5c5" />
+        <Color color="#4d87ca" />
+        <Color color="#4a4a4a" />
+        <Color color="#e0e0e0" />
+      </ColorMenu>
+      <Label><Sale /></Label>
+    </TopRow>
+    <Price>170$</Price>
+  </Wrapper>
+);

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'AvenirNextBold';
+  src: url('./fonts/avenir-next-bold.woff')  format('woff'),
+       url('./fonts/avenir-next-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AndaleMono';
+  src: url('./fonts/Andale-Mono.woff')  format('woff'),
+       url('./fonts/Andale-Mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirNextReg';
+  src: url('./fonts/avenir-next-medium.woff')  format('woff'),
+       url('./fonts/avenir-next-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
