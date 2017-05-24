@@ -18,7 +18,6 @@ const Current = styled.img`
   margin-top: 30px;
   max-width: 804px;
   width: 100%;
-  height: 100%;
 `;
 
 const Menu = styled.div`
@@ -47,7 +46,6 @@ const PhotoButton = styled.button`
 const Img = styled.img`
   max-width: 148px;
   width: 100%;
-  height: 100%;
 `;
 
 export default () => (

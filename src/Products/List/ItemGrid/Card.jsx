@@ -17,11 +17,10 @@ const Photo = styled.img`
   display: flex;
   margin: 0;
   width: 100%;
-  height: 100%;
 `;
 
 const Price = styled(Link)`
-  height: 91px;
+  padding: 30px 0;
   font-size: 30px;
   font-family: AvenirNextBold;
   text-transform: uppercase;
