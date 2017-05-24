@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Description = styled.p`
-  margin: 27px 30px 0 30px;
+  margin: 27px 30px 115px 30px;
   font-family: AvenirNextReg;
   font-size: 20px;
   color: #d8d8d8;
