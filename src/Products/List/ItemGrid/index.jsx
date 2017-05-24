@@ -10,7 +10,10 @@ import Card from './Card';
 
 const GridWrapper = styled.div`
   box-sizing: border-box;
-  margin: 24px 25px;
+  margin: 18px 15px;
+  @media screen and (min-width: 768px){
+    margin: 24px 25px;
+  }
 `;
 
 export default () => (

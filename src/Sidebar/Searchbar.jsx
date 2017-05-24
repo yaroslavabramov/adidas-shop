@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: 14px 0px;
   background-size: 28px 30px;
+  display: none;
+  @media screen and (min-width: 768px){
+    display: block;
+  }
 `;
 
 const Form = styled.form`

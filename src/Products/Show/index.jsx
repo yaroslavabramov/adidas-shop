@@ -8,17 +8,27 @@ import Description from './Description';
 import BuyNow from './BuyNow';
 
 const Wrapper = styled.div`
-  width: calc(100% - 414px);
+  width: 100%;
   display: flex;
   flex-flow: column;
+  @media screen and (min-width: 768px){
+      width: calc(100% - 327px);
+  }
+  @media screen and (min-width: 992px){
+      width: calc(100% - 414px);
+  }
 `;
 
 const Header = styled.header`
   width: inherit;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  position: absolute;
   margin-top: 25px;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    position: absolute;
+  }
 `;
 
 export default () => (

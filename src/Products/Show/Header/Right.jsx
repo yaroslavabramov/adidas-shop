@@ -3,12 +3,22 @@ import styled from 'styled-components';
 import Sale from '../../../Components/SaleLabel';
 
 const Wrapper = styled.div`
-  margin-right: 30px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 768px){
+    flex-direction: column;
+    margin-right: 30px;
+  }
 `;
 
 const TopRow = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
 `;
 
 const ColorMenu = styled.span`
@@ -28,18 +38,27 @@ const Color = styled.button`
 `;
 
 const Price = styled.h2`
-  text-align: right;
-  height: 109px;
+  margin: 0px 0 15px 15px;
+  text-align: left;
   font-family: AvenirNextBold;
   font-size: 80px;
+  height: 80px;
   color: #e3e3e3;
-  margin-top: 20px;
   border: none;
   outline: none;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    height: 109px;
+    margin-top: 20px;
+    text-align: right;
+  }
 `;
 
 const Label = styled.span`
-  margin-left: 30px;
+  margin-left: 15px;
+  @media screen and (min-width: 768px){
+    margin-left: 30px;
+  }
 `;
 
 export default () => (
