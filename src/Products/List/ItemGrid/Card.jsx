@@ -45,7 +45,7 @@ function Card({ price, photo, isSale }) {
     <CardWrapper>
       {isSale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      {isSale ? <Price to="/item" isSale>${price}</Price> : <Price to="/item">${price}</Price>}
+      <Price to="/item" isSale={isSale}>${price}</Price>
     </CardWrapper>
   );
 }
