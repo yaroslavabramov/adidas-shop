@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import HeaderRight from './Header/Right';
@@ -6,6 +6,13 @@ import HeaderLeft from './Header/Left';
 import PhotoGallery from './PhotoGallery';
 import Description from './Description';
 import BuyNow from './BuyNow';
+
+const Palette = [
+  '#c5c5c5',
+  '#4d87ca',
+  '#4a4a4a',
+  '#e0e0e0',
+];
 
 const Wrapper = styled.div`
   width: 100%;
@@ -31,14 +38,34 @@ const Header = styled.header`
   }
 `;
 
-export default () => (
-  <Wrapper>
-    <Header>
-      <HeaderLeft />
-      <HeaderRight />
-    </Header>
-    <PhotoGallery />
-    <Description />
-    <BuyNow />
-  </Wrapper>
-);
+export default class Show extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentIndex: 0,
+    };
+    this.changeColor = this.changeColor.bind(this);
+  }
+
+  changeColor(currentIndex) {
+    this.setState({ currentIndex });
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Header>
+          <HeaderLeft color={Palette[this.state.currentIndex]} />
+          <HeaderRight
+            palette={Palette}
+            changeColor={this.changeColor}
+            currentIndex={this.state.currentIndex}
+          />
+        </Header>
+        <PhotoGallery />
+        <Description />
+        <BuyNow />
+      </Wrapper>
+    );
+  }
+}

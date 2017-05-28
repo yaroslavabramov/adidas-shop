@@ -43,7 +43,7 @@ const Price = styled.h2`
   font-family: AvenirNextBold;
   font-size: 80px;
   height: 80px;
-  color: #e3e3e3;
+  color: ${props => props.color};
   border: none;
   outline: none;
   @media screen and (min-width: 768px){
@@ -61,17 +61,19 @@ const Label = styled.span`
   }
 `;
 
-export default () => (
+export default props => (
   <Wrapper>
     <TopRow>
       <ColorMenu>
-        <Color color="#c5c5c5" />
-        <Color color="#4d87ca" />
-        <Color color="#4a4a4a" />
-        <Color color="#e0e0e0" />
+        {props.palette.map((color,i) => (
+          <Color
+            color={color}
+            onClick={() => props.changeColor(i)}
+          />
+        ))}
       </ColorMenu>
       <Label><Sale /></Label>
     </TopRow>
-    <Price>170$</Price>
+    <Price color={props.palette[props.currentIndex]}>170$</Price>
   </Wrapper>
 );

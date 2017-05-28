@@ -23,7 +23,7 @@ const Name = styled.h1`
 
 const Save = styled.button`
   display: none;
-  background-color: #e3e3e3;
+  background-color: ${props => props.color};
   color: #fff;
   font-family: AvenirNextBold;
   font-size: 18px;
@@ -34,17 +34,14 @@ const Save = styled.button`
   border: none;
   outline: none;
   margin-top: 15px;
-  &:hover{
-    background-color: #b0bdfc;
-  }
   @media screen and (min-width: 768px){
     display: block;
   }
 `;
 
-export default () => (
+export default props => (
   <Wrapper>
     <Name>ultra boost</Name>
-    <Save>save</Save>
+    <Save color={props.color} >save</Save>
   </Wrapper>
 );
