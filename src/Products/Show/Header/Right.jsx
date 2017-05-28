@@ -65,7 +65,7 @@ export default props => (
   <Wrapper>
     <TopRow>
       <ColorMenu>
-        {props.palette.map((color,i) => (
+        {props.palette.map((color, i) => (
           <Color
             color={color}
             onClick={() => props.changeColor(i)}
