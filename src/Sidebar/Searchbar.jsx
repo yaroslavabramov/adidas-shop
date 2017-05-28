@@ -2,25 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import Icon from './images/group.png';
 
-const Wrapper = styled.div`
-  margin-top:144px;
-  margin-left: 22px;
-  margin-right: 22px;
-  background-image: url(${Icon});
-  background-repeat: no-repeat;
-  background-position: 14px 0px;
-  background-size: 28px 30px;
-  display: none;
-  @media screen and (min-width: 768px){
-    display: block;
-  }
-`;
-
 const Form = styled.form`
   padding-left: 60px;
   padding-top: 2px;
   padding-bottom: 12px;
   border-bottom: 4px solid #373737;
+  margin-top: 20px;
+  background-image: url(${Icon});
+  background-repeat: no-repeat;
+  background-position: 14px 0px;
+  background-size: 28px 30px;
+  display: ${props => (props.isOpened ? 'block' : 'none')};
+  @media screen and (min-width: 768px){
+    margin-top: 144px;
+    display: block;
+  }
 `;
 
 const Input = styled.input`
@@ -35,10 +31,8 @@ const Input = styled.input`
   -webkit-appearance: none;
 `;
 
-export default () => (
-  <Wrapper>
-    <Form action="URL">
-      <Input type="text" />
-    </Form>
-  </Wrapper>
+export default props => (
+  <Form isOpened={props.isOpened} action="URL">
+    <Input type="text" />
+  </Form>
 );
