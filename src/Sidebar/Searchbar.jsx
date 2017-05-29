@@ -14,7 +14,7 @@ const Form = styled.form`
   background-size: 28px 30px;
   display: ${props => (props.isOpened ? 'block' : 'none')};
   @media screen and (min-width: 768px){
-    margin-top: 144px;
+    margin-top: 40px;
     display: block;
   }
 `;

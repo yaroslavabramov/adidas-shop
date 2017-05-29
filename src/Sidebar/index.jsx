@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Searchbar from './Searchbar';
 import Menu from './Menu';
-import Logo from './images/logo.png';
+import Logo from './images/logo@2x.png';
 import Burger from './images/burger.svg';
 
 const Wrapper = styled.aside`
@@ -13,20 +14,40 @@ const Wrapper = styled.aside`
   width: 100%;
   min-height: 64px;
   background-color: #0e0e0e;
-  background-image: url(${Logo});
-  background-repeat: no-repeat;
-  background-size: 50px auto;
-  background-position: 10px 17px;
-  text-align: right;
   @media screen and (min-width: 768px){
     padding: 0 22px;
     width: 327px;
-    background-position: center 50px;
-    background-size: 77px auto;
     min-height: 1171px;
   }
   @media screen and (min-width: 992px){
     width: 414px;
+  }
+`;
+
+const Header = styled.div`
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  @media screen and (min-width: 768px){
+    width: 100%;
+    justify-content: center;
+  }
+`;
+
+const LogoLink = styled(Link)`
+  margin-top: 17px;
+  width: 45px;
+  height: 30px;
+  background: none;
+  background-image: url(${Logo});
+  background-repeat: no-repeat;
+  background-size: 45px auto;
+  background-position: 0 0;
+  @media screen and (min-width: 768px){
+    margin-top: 47px;
+    width: 80px;
+    height: 54px;
+    background-size: 80px auto;
   }
 `;
 
@@ -55,7 +76,10 @@ export default class Sidebar extends Component {
   render() {
     return (
       <Wrapper>
-        <BurgerButton onClick={this.handleClick} ><img src={Burger} alt="" /></BurgerButton>
+        <Header>
+          <LogoLink to="/" />
+          <BurgerButton onClick={this.handleClick} ><img src={Burger} alt="" /></BurgerButton>
+        </Header>
         <Searchbar isOpened={this.state.isOpened} />
         <Menu isOpened={this.state.isOpened} />
       </Wrapper>
