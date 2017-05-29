@@ -32,10 +32,10 @@ export default class Gallery extends Component {
     this.state = {
       currentIndex: 0,
     };
-    this.showPhoto = this.showPhoto.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  showPhoto(currentIndex) {
+  handleClick(currentIndex) {
     this.setState({ currentIndex });
   }
 
@@ -45,7 +45,7 @@ export default class Gallery extends Component {
         <Current src={Images[this.state.currentIndex]} alt="item img" />
         <Photobar
           images={Images}
-          showPhoto={this.showPhoto}
+          handleClick={this.handleClick}
           currentIndex={this.state.currentIndex}
         />
       </Wrapper>

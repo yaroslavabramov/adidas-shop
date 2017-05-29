@@ -36,7 +36,7 @@ export default props => (
         src={image}
         alt=""
         isActive={props.currentIndex === index}
-        onClick={() => props.showPhoto(index)}
+        onClick={() => props.handleClick(index)}
       />
     ))}
   </Menu>
