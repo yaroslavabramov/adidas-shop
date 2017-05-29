@@ -24,7 +24,8 @@ function App() {
       <Page>
         <Sidebar />
         <Route exact path="/" component={List} />
-        <Route exact path="/item" component={Show} />
+        <Route exact path="/products/:group/:type" component={List} />
+        <Route exact path="/products/:group/:type/:id" component={Show} />
       </Page>
     </Router>
   );
