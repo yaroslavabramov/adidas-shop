@@ -65,7 +65,7 @@ export default props => (
   <Wrapper>
     <TopRow>
       <ColorMenu>
-        {props.palette.map((color, i) => (
+        {props.colors.map((color, i) => (
           <Color
             color={color}
             onClick={() => props.changeColor(i)}
@@ -74,6 +74,6 @@ export default props => (
       </ColorMenu>
       <Label><Sale /></Label>
     </TopRow>
-    <Price color={props.palette[props.currentIndex]}>170$</Price>
+    <Price color={props.colors[props.currentIndex]}>170$</Price>
   </Wrapper>
 );

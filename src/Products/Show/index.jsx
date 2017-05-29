@@ -7,7 +7,7 @@ import PhotoGallery from './PhotoGallery';
 import Description from './Description';
 import BuyNow from './BuyNow';
 
-const Palette = [
+const colors = [
   '#c5c5c5',
   '#4d87ca',
   '#4a4a4a',
@@ -55,9 +55,9 @@ export default class Show extends Component {
     return (
       <Wrapper>
         <Header>
-          <HeaderLeft color={Palette[this.state.currentIndex]} />
+          <HeaderLeft color={colors[this.state.currentIndex]} />
           <HeaderRight
-            palette={Palette}
+            colors={colors}
             changeColor={this.changeColor}
             currentIndex={this.state.currentIndex}
           />
