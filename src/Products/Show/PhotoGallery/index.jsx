@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Photobar from './Photobar';
-import Linkimg1 from './images/link1@3x.jpg';
-import Linkimg2 from './images/link2@3x.jpg';
-import Linkimg3 from './images/link3@3x.jpg';
-import Linkimg4 from './images/bitmap1@3x.jpg';
+import linkimg1 from './images/link1@3x.jpg';
+import linkimg2 from './images/link2@3x.jpg';
+import linkimg3 from './images/link3@3x.jpg';
+import linkimg4 from './images/bitmap1@3x.jpg';
 
-const Images = [
-  Linkimg1,
-  Linkimg2,
-  Linkimg3,
-  Linkimg4,
+const images = [
+  linkimg1,
+  linkimg2,
+  linkimg3,
+  linkimg4,
 ];
 
 const Wrapper = styled.div`
@@ -42,9 +42,9 @@ export default class Gallery extends Component {
   render() {
     return (
       <Wrapper>
-        <Current src={Images[this.state.currentIndex]} alt="item img" />
+        <Current src={images[this.state.currentIndex]} alt="item img" />
         <Photobar
-          images={Images}
+          images={images}
           handleClick={this.handleClick}
           currentIndex={this.state.currentIndex}
         />
