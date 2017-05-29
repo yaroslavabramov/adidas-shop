@@ -68,7 +68,7 @@ export default props => (
         {props.colors.map((color, i) => (
           <Color
             color={color}
-            onClick={() => props.changeColor(i)}
+            onClick={() => props.handleClick(i)}
           />
         ))}
       </ColorMenu>

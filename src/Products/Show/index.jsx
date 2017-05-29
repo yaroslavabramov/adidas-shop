@@ -44,10 +44,10 @@ export default class Show extends Component {
     this.state = {
       currentIndex: 0,
     };
-    this.changeColor = this.changeColor.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  changeColor(currentIndex) {
+  handleClick(currentIndex) {
     this.setState({ currentIndex });
   }
 
@@ -58,7 +58,7 @@ export default class Show extends Component {
           <HeaderLeft color={colors[this.state.currentIndex]} />
           <HeaderRight
             colors={colors}
-            changeColor={this.changeColor}
+            handleClick={this.handleClick}
             currentIndex={this.state.currentIndex}
           />
         </Header>
