@@ -40,12 +40,12 @@ const Label = styled.div`
   right: 17px;
 `;
 
-function Card({ price, photo, isSale }) {
+function Card({ id, price, photo, isSale }) {
   return (
     <CardWrapper>
       {isSale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      <Price to="/item" isSale={isSale}>${price}</Price>
+      <Price to={`shoes/${id}`} isSale={isSale}>${price}</Price>
     </CardWrapper>
   );
 }
