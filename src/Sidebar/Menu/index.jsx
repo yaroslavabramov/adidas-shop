@@ -24,24 +24,27 @@ const Link = styled(NavLink)`
   &:hover{
     color: #fff;
   }
+  &.active{
+    color: #fff;
+  }
 `;
 
 export default props => (
   <Nav isOpened={props.isOpened} >
-    <Menu title="football" to="/">
-      <Link to="/">shoes</Link>
-      <Link to="/">clothing</Link>
-      <Link to="/">accesories</Link>
+    <Menu title="football" >
+      <Link to="/products/football/shoes">shoes</Link>
+      <Link to="/products/football/clothing">clothing</Link>
+      <Link to="/products/football/accesories">accesories</Link>
     </Menu>
-    <Menu title="running" to="/">
-      <Link to="/">shoes</Link>
-      <Link to="/">clothing</Link>
-      <Link to="/">accesories</Link>
+    <Menu title="running" >
+      <Link to="/products/running/shoes">shoes</Link>
+      <Link to="/products/running/clothing">clothing</Link>
+      <Link to="/products/running/accesories">accesories</Link>
     </Menu>
-    <Menu title="basketball" to="/">
-      <Link to="/">shoes</Link>
-      <Link to="/">clothing</Link>
-      <Link to="/">accesories</Link>
+    <Menu title="basketball" >
+      <Link to="/products/basketball/shoes">shoes</Link>
+      <Link to="/products/basketball/clothing">clothing</Link>
+      <Link to="/products/basketball/accesories">accesories</Link>
     </Menu>
   </Nav>
 );

@@ -19,29 +19,29 @@ const GridWrapper = styled.div`
 export default () => (
   <GridWrapper>
     <Row>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg1} isSale />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="1" price="170" photo={Itemimg1} isSale />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="240.99" photo={Itemimg2} />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="2" price="240.99" photo={Itemimg2} />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="1024" photo={Itemimg3} />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="3" price="1024" photo={Itemimg3} />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg2} />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="4" price="170" photo={Itemimg2} />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg3} isSale />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="5" price="170" photo={Itemimg3} isSale />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg1} />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="6" price="170" photo={Itemimg1} />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg1} isSale />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="7" price="170" photo={Itemimg1} isSale />
       </Col>
-      <Col xs={12} sm={6} md={4} lg={3}>
-        <Card price="170" photo={Itemimg1} />
+      <Col xs={12} sm={6} md={4}>
+        <Card id="8" price="170" photo={Itemimg1} />
       </Col>
     </Row>
   </GridWrapper>
