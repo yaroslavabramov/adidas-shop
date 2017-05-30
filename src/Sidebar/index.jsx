@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Searchbar from './Searchbar';
 import Menu from './Menu';
-import Logo from './images/logo.png';
+import Logo from './images/logo@2x.png';
+import Burger from './images/burger.svg';
 
-const Sidebar = styled.aside`
+const Wrapper = styled.aside`
+  box-sizing: border-box;
   margin:0;
-  padding:0;
+  padding: 0 14px;
   width: 100%;
-  height: 64px;
+  min-height: 64px;
   background-color: #0e0e0e;
-  background-image: url(${Logo});
-  background-repeat: no-repeat;
-  background-size: 50px auto;
-  background-position: 10px center;
   @media screen and (min-width: 768px){
+    padding: 0 22px;
     width: 327px;
-    background-position: center 50px;
-    background-size: 77px auto;
     min-height: 1171px;
   }
   @media screen and (min-width: 992px){
@@ -26,9 +24,65 @@ const Sidebar = styled.aside`
   }
 `;
 
-export default () => (
-  <Sidebar>
-    <Searchbar />
-    <Menu />
-  </Sidebar>
-);
+const Header = styled.div`
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  @media screen and (min-width: 768px){
+    width: 100%;
+    justify-content: center;
+  }
+`;
+
+const LogoLink = styled(Link)`
+  margin-top: 17px;
+  width: 45px;
+  height: 30px;
+  background: none;
+  background-image: url(${Logo});
+  background-repeat: no-repeat;
+  background-size: 45px auto;
+  background-position: 0 0;
+  @media screen and (min-width: 768px){
+    margin-top: 47px;
+    width: 80px;
+    height: 54px;
+    background-size: 80px auto;
+  }
+`;
+
+const BurgerButton = styled.button`
+  background: none;
+  padding:0;
+  margin-top: 17px;
+  @media screen and (min-width: 768px){
+    display: none;
+  }
+`;
+
+export default class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpened: false,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(prevState => ({ isOpened: !prevState.isOpened }));
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Header>
+          <LogoLink to="/" />
+          <BurgerButton onClick={this.handleClick} ><img src={Burger} alt="" /></BurgerButton>
+        </Header>
+        <Searchbar isOpened={this.state.isOpened} />
+        <Menu isOpened={this.state.isOpened} />
+      </Wrapper>
+    );
+  }
+}
