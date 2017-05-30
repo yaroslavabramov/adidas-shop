@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import Photobar from './Photobar';
+import linkimg1 from './images/link1@3x.jpg';
+import linkimg2 from './images/link2@3x.jpg';
+import linkimg3 from './images/link3@3x.jpg';
+import linkimg4 from './images/bitmap1@3x.jpg';
 
-import Linkimg1 from './images/link1@3x.jpg';
-import Linkimg2 from './images/link2@3x.jpg';
-import Linkimg3 from './images/link3@3x.jpg';
-import Linkimg4 from './images/bitmap1.jpg';
-import Itemphoto from './images/bitmap1@3x.jpg';
+const images = [
+  linkimg1,
+  linkimg2,
+  linkimg3,
+  linkimg4,
+];
 
-const Gallery = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,43 +26,29 @@ const Current = styled.img`
   width: 100%;
 `;
 
-const Menu = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 15px;
-  padding-left: 25px;
-  margin-top: 15px;
-`;
-
-const PhotoButton = styled.button`
-  background: none;
-  padding: 0;
-  margin-right: 10px;
-  border: none;
-  outline: none;
-  ${props => props.isActive && `
-    border: 5px solid #e7e7e7;
-  `};
-  @@media screen and (min-width: 768px) {
-    margin-right: 15px;
+export default class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentIndex: 0,
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
-`;
 
-const Img = styled.img`
-  max-width: 148px;
-  width: 100%;
-`;
+  handleClick(currentIndex) {
+    this.setState({ currentIndex });
+  }
 
-export default () => (
-  <Gallery>
-    <Current src={Itemphoto} alt="item img" />
-    <Menu>
-      <PhotoButton><Img src={Linkimg1} alt="" /></PhotoButton>
-      <PhotoButton><Img src={Linkimg2} alt="" /></PhotoButton>
-      <PhotoButton><Img src={Linkimg3} alt="" /></PhotoButton>
-      <PhotoButton isActive><Img src={Linkimg4} alt="" /></PhotoButton>
-      <PhotoButton><Img src={Linkimg2} alt="" /></PhotoButton>
-    </Menu>
-  </Gallery>
-);
+  render() {
+    return (
+      <Wrapper>
+        <Current src={images[this.state.currentIndex]} alt="item img" />
+        <Photobar
+          images={images}
+          handleClick={this.handleClick}
+          currentIndex={this.state.currentIndex}
+        />
+      </Wrapper>
+    );
+  }
+}
