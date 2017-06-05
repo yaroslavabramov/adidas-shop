@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint",
-    "deploy": "now -p --token=nowToken && now ln --token=nowToken"
+    "deploy": "now -p -t $nowToken && now ln -t $nowToken"
   },
   "now": {
     "alias": "yabramov-adidas-shop"
