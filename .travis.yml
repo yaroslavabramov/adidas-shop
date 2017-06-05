@@ -12,3 +12,4 @@ deploy:
     - npm run deploy
   on:
     branch: feat/deploy
+  skip_cleanup: true
