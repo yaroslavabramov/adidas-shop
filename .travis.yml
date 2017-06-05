@@ -3,5 +3,13 @@ node_js:
   - "node"
 install:
   - npm install
+  - npm install -g now
 script:
   - npm run lint
+deploy:
+  provider: script
+  script:
+    - npm run deploy
+  on:
+    branch: feat/deploy
+  skip_cleanup: true
