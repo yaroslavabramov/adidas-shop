@@ -12,7 +12,7 @@ deploy:
   script:
     - npm run deploy
   on:
-    branch: feat/deploy
+    branch: master
   skip_cleanup: true
   provider: script
   script:
