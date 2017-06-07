@@ -7,9 +7,15 @@ install:
 script:
   - npm run lint
 deploy:
+  skip_cleanup: true
   provider: script
   script:
     - npm run deploy
   on:
     branch: feat/deploy
   skip_cleanup: true
+  provider: script
+  script:
+    - npm run devdeploy
+  on:
+    branch: develop
