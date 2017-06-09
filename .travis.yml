@@ -18,4 +18,4 @@ deploy:
   script:
     - npm run deploy-dev
   on:
-    branch: all
+    all_branches: true
