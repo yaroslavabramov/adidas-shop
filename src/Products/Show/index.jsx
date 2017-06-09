@@ -73,19 +73,19 @@ export default class Show extends Component {
         <Header>
           <HeaderLeft
             color={colors[this.state.currentIndex]}
-            title={this.state.title}
+            title={this.state.product.title}
           />
           <HeaderRight
-            price={priceTransform(this.state.price, this.state.currency)}
+            price={priceTransform(this.state.product.price, this.state.product.currency)}
             colors={colors}
             handleClick={this.handleClick}
             currentIndex={this.state.currentIndex}
           />
         </Header>
         <PhotoGallery
-          images={this.state.images}
+          images={this.state.product.images}
         />
-        <Description content={this.state.description} />
+        <Description content={this.state.product.description} />
         <BuyNow />
       </Wrapper>
     );
