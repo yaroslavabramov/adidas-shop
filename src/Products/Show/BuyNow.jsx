@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const BuyNow = styled.button`
   width: inherit;
+  min-width: inherit;
   height: 74px;
   position: fixed;
   text-transform: uppercase;

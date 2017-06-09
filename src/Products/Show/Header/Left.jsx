@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   margin-left: 15px;
   @media screen and (min-width: 768px){
     margin-left: 30px;
+    margin-right: 100px;
   }
 `;
 
@@ -12,7 +13,7 @@ const Name = styled.h1`
   max-width: 300px;
   color: #393939;
   text-transform: uppercase;
-  font-family: AvenirNextbold;
+  font-family: AvenirNextBold;
   font-size: 36px;
   line-height: 1;
   margin:0;

@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { imageLink } from '../../../api';
 
 const Menu = styled.div`
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-right: 15px;
@@ -15,8 +18,8 @@ const Img = styled.img`
   cursor: pointer;
   padding: 0;
   margin-right: 10px;
-  max-width: 180px;
-  width: 20%;
+  max-width: 90px;
+  width: 15%;
   border: 5px solid #fff;
   transition: all 0.4s;
   ${props => props.isActive && `

@@ -13,11 +13,13 @@ const Wrapper = styled.div`
 `;
 
 const TopRow = styled.div`
+  margin-top: 5px;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: space-between;
   @media screen and (min-width: 768px){
     flex-direction: row;
+    justify-content: flex-end;
   }
 `;
 

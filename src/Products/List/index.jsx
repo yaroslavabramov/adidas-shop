@@ -9,10 +9,10 @@ import priceTransform from '../../Components/functions';
 const Wrapper = styled.main`
   width: 100%;
   @media screen and (min-width: 768px){
-      width: calc(100% - 327px);
+      width: 66%;
   }
   @media screen and (min-width: 992px){
-      width: calc(100% - 414px);
+      min-width: calc(100% - 414px);
   }
 `;
 

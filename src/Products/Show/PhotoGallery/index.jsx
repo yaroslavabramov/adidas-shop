@@ -12,8 +12,8 @@ const Wrapper = styled.div`
 
 const Current = styled.img`
   margin-top: 30px;
-  max-width: 500px;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 `;
 
 export default class Gallery extends Component {
