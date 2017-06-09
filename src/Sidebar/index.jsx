@@ -16,11 +16,12 @@ const Wrapper = styled.aside`
   background-color: #0e0e0e;
   @media screen and (min-width: 768px){
     padding: 0 22px;
-    width: 327px;
+    width: 34%;
+    max-width: 327px;
     min-height: 1171px;
   }
   @media screen and (min-width: 992px){
-    width: 414px;
+    max-width: 414px;
   }
 `;
 

@@ -21,15 +21,16 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
   @media screen and (min-width: 768px){
-      width: calc(100% - 327px);
+      width: 66%;
   }
   @media screen and (min-width: 992px){
-      width: calc(100% - 414px);
+      min-width: calc(100% - 414px);
   }
 `;
 
 const Header = styled.header`
   width: inherit;
+  min-width: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,6 +38,8 @@ const Header = styled.header`
   @media screen and (min-width: 768px){
     flex-direction: row;
     position: absolute;
+  }
+  @media screen and (min-wiidth: 992px){
   }
 `;
 

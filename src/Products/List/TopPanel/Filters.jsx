@@ -41,7 +41,7 @@ const Button = styled.button`
   background: none;
   color: ${props => (props.isActive ? '#4d42f8' : '#d6d6d6')};
   &:hover{
-    color: #111;
+    color: #4d42f8;
   }
 `;
 export default () => (
