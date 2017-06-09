@@ -16,6 +16,6 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
-    - npm run devdeploy
+    - npm run deploy-dev
   on:
     branch: develop
