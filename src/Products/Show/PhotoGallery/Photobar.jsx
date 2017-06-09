@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { imageLink } from '../../../api';
 
 const Menu = styled.div`
   display: flex;
@@ -31,13 +32,13 @@ const Img = styled.img`
 
 export default props => (
   <Menu>
-    {props.images.map((image, index) => (
+    {props.images ? props.images.map((image, index) => (
       <Img
-        src={image}
+        src={imageLink(image, 128)}
         alt=""
         isActive={props.currentIndex === index}
         onClick={() => props.handleClick(index)}
       />
-    ))}
+    )) : null }
   </Menu>
 );

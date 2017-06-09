@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
-
-import Itemimg1 from './images/bitmap.jpg';
-import Itemimg2 from './images/bitmap1.jpg';
-import Itemimg3 from './images/bitmap2.jpg';
-
+import { get, imageLink } from '../../../api';
 import Card from './Card';
 
 const GridWrapper = styled.div`
@@ -16,33 +12,42 @@ const GridWrapper = styled.div`
   }
 `;
 
-export default () => (
-  <GridWrapper>
-    <Row>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="1" price="170" photo={Itemimg1} isSale />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="2" price="240.99" photo={Itemimg2} />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="3" price="1024" photo={Itemimg3} />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="4" price="170" photo={Itemimg2} />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="5" price="170" photo={Itemimg3} isSale />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="6" price="170" photo={Itemimg1} />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="7" price="170" photo={Itemimg1} isSale />
-      </Col>
-      <Col xs={12} sm={6} md={4}>
-        <Card id="8" price="170" photo={Itemimg1} />
-      </Col>
-    </Row>
-  </GridWrapper>
-);
+export default class extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+    };
+    this.fetchData = this.fetchData.bind(this);
+  }
+
+  componentDidMount() {
+    this.fetchData(this.props);
+  }
+
+  componentWillReciveProps(newProps) {
+    this.fetchData(newProps);
+  }
+
+  fetchData(props) {
+    get(`v1/${props.match.url}`).then(json => this.setState({ products: json.items }));
+  }
+  render() {
+    return (
+      <GridWrapper>
+        <Row>
+          {this.state.products.map(product => (
+            <Col xs={12} sm={6} md={4}>
+              <Card
+                url={`${this.props.match.url}//${product.id}`}
+                price={product.price}
+                photo={imageLink(product.images[0], 256)}
+                isSale="true"
+              />
+            </Col>
+          ))}
+        </Row>
+      </GridWrapper>
+    );
+  }
+}

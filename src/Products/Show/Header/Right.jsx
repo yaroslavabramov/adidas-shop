@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 const TopRow = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: flex-end;
   @media screen and (min-width: 768px){
     flex-direction: row;
   }
@@ -74,6 +74,6 @@ export default props => (
       </ColorMenu>
       <Label><Sale /></Label>
     </TopRow>
-    <Price color={props.colors[props.currentIndex]}>170$</Price>
+    <Price color={props.colors[props.currentIndex]}>{props.price}</Price>
   </Wrapper>
 );

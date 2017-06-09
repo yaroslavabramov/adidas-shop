@@ -77,7 +77,7 @@ export default class Sidebar extends Component {
     return (
       <Wrapper>
         <Header>
-          <LogoLink to="/" />
+          <LogoLink to="/products/football/cleats" />
           <BurgerButton onClick={this.handleClick} ><img src={Burger} alt="" /></BurgerButton>
         </Header>
         <Searchbar isOpened={this.state.isOpened} />

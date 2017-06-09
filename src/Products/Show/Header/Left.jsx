@@ -41,7 +41,7 @@ const Save = styled.button`
 
 export default props => (
   <Wrapper>
-    <Name>ultra boost</Name>
+    <Name>{props.title}</Name>
     <Save color={props.color} >save</Save>
   </Wrapper>
 );
