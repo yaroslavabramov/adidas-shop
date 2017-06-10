@@ -26,6 +26,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
-    "prepush": "npm run lint"
+    "prepush": "npm run lint",
+    "copy-config": "cp now.json build",
+    "deploy": "npm run build && npm run copy-config && cd build && now -p -t $nowToken && now ln -t $nowToken",
+    "deploy-dev": "npm run build && npm run copy-config && cd build && now -p -t $nowToken && now ln yabramov-adidas-shop-dev -t $nowToken"
   }
 }
