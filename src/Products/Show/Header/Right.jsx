@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
   @media screen and (min-width: 768px){
+    margin-left: 30px;
     flex-direction: column;
     margin-right: 30px;
   }

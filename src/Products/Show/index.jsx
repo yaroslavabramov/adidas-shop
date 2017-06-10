@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.header`
-  width: inherit;
+  width: 100%;
   min-width: inherit;
   display: flex;
   flex-direction: column;
@@ -37,9 +37,10 @@ const Header = styled.header`
   margin-top: 25px;
   @media screen and (min-width: 768px){
     flex-direction: row;
-    position: absolute;
   }
-  @media screen and (min-wiidth: 992px){
+  @media screen and (min-width: 992px){
+    width: inherit;
+    position: absolute;
   }
 `;
 

@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   margin-left: 15px;
   @media screen and (min-width: 768px){
     margin-left: 30px;
-    margin-right: 100px;
   }
 `;
 
@@ -18,7 +17,10 @@ const Name = styled.h1`
   line-height: 1;
   margin:0;
   @media screen and (min-width: 768px){
-    font-size:64px;
+    font-size: 54px;
+  }
+  @media screen and (min-width: 992px){
+    font-size: 64px;
   }
 `;
 
