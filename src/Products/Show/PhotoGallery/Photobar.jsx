@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageLink } from '../../../api';
+import getImageLink from '../../../Components/ImageLink';
 
 const Menu = styled.div`
   box-sizing: border-box;
@@ -37,7 +37,7 @@ export default props => (
   <Menu>
     {props.images ? props.images.map((image, index) => (
       <Img
-        src={imageLink(image, 128)}
+        src={getImageLink(image, 128)}
         alt=""
         isActive={props.currentIndex === index}
         onClick={() => props.handleClick(index)}

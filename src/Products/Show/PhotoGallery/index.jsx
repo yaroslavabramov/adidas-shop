@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Photobar from './Photobar';
-import { imageLink } from '../../../api';
+import getImageLink from '../../../Components/ImageLink';
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ export default class Gallery extends Component {
     return (
       <Wrapper>
         <Current
-          src={images ? imageLink(images[this.state.currentIndex], 512) : null}
+          src={images ? getImageLink(images[this.state.currentIndex], 512) : null}
           alt="item img"
         />
         <Photobar

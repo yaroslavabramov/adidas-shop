@@ -6,8 +6,8 @@ import HeaderLeft from './Header/Left';
 import PhotoGallery from './PhotoGallery';
 import Description from './Description';
 import BuyNow from './BuyNow';
-import { get } from '../../api';
-import priceTransform from '../../Components/functions';
+import get from '../../api';
+import priceTransform from '../../Components/Price';
 
 const colors = [
   '#c5c5c5',
@@ -58,8 +58,8 @@ export default class Show extends Component {
     this.fetchData(this.props);
   }
 
-  componentWillReceiveProps(newProps) {
-    this.fetchData(newProps);
+  componentWillReceiveProps(nextProps) {
+    this.fetchData(nextProps);
   }
 
   handleClick(currentIndex) {

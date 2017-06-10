@@ -1,4 +1,4 @@
-export default function priceTransform(price, currency) {
+export default (price, currency) => {
   switch (currency) {
     case 'USD':
       return (`$${price / 100}`);
@@ -9,4 +9,4 @@ export default function priceTransform(price, currency) {
     default:
       return ('');
   }
-}
+};

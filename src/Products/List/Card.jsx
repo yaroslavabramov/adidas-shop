@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import SaleLabel from '../../../Components/SaleLabel';
+import SaleLabel from '../../Components/SaleLabel';
 
 const CardWrapper = styled(Link)`
   padding: 9px;
