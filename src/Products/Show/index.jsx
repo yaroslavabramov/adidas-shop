@@ -6,8 +6,7 @@ import HeaderLeft from './Header/Left';
 import PhotoGallery from './PhotoGallery';
 import Description from './Description';
 import BuyNow from './BuyNow';
-import get from '../../api';
-import priceTransform from '../../Components/Price';
+import { get } from '../../api';
 
 const colors = [
   '#c5c5c5',
@@ -68,7 +67,7 @@ export default class Show extends Component {
   }
 
   fetchData(props) {
-    get(`v1/${props.match.url}`).then(json => this.setState({ product: json }));
+    get(`v1/${props.match.url}`).then(product => this.setState({ product }));
   }
 
   render() {
@@ -80,7 +79,8 @@ export default class Show extends Component {
             title={this.state.product.title}
           />
           <HeaderRight
-            price={priceTransform(this.state.product.price, this.state.product.currency)}
+            price={this.state.product.price}
+            currency={this.state.product.currency}
             colors={colors}
             handleClick={this.handleClick}
             currentIndex={this.state.currentIndex}

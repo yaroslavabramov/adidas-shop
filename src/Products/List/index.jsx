@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
-import get from '../../api';
+import { get } from '../../api';
 import Card from './Card';
 import TopPanel from './TopPanel';
-import priceTransform from '../../Components/Price';
-import getImageLink from '../../Components/ImageLink';
+import getImageLink from '../getImageLink';
 
 const Wrapper = styled.main`
   width: 100%;
@@ -43,7 +42,7 @@ export default class extends Component {
   }
 
   fetchData(props) {
-    get(`v1/${props.match.url}`).then(json => this.setState({ products: json.items }));
+    get(`v1/${props.match.url}`).then(({ items: products }) => this.setState({ products }));
   }
 
   render() {
@@ -56,7 +55,8 @@ export default class extends Component {
               <Col xs={12} sm={6} md={4}>
                 <Card
                   url={`${this.props.match.url}/${product.id}`}
-                  price={priceTransform(product.price, product.currency)}
+                  price={product.price}
+                  currency={product.currency}
                   photo={getImageLink(product.images[0], 512)}
                   isSale="true"
                 />

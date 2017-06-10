@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import SaleLabel from '../../Components/SaleLabel';
+import Price from '../../Components/Price';
 
 const CardWrapper = styled(Link)`
   padding: 9px;
@@ -23,7 +24,7 @@ const Photo = styled.img`
   width: 100%;
 `;
 
-const Price = styled.div`
+const PriceWrapper = styled.div`
   padding: 30px 0;
   font-size: 30px;
   font-family: AvenirNextBold;
@@ -44,12 +45,12 @@ const Label = styled.div`
   right: 17px;
 `;
 
-function Card({ url, price, photo, isSale }) {
+function Card({ url, price, currency, photo, isSale }) {
   return (
     <CardWrapper to={url}>
       {isSale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      <Price isSale={isSale}>{price}</Price>
+      <PriceWrapper><Price price={price} currency={currency} /></PriceWrapper>
     </CardWrapper>
   );
 }

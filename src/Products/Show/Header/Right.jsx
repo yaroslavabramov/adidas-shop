@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Sale from '../../../Components/SaleLabel';
+import Price from '../../../Components/Price';
 
 const Wrapper = styled.div`
   margin-right: 15px;
@@ -40,7 +41,7 @@ const Color = styled.button`
   background-color: ${props => props.color};
 `;
 
-const Price = styled.h2`
+const PriceWrapper = styled.h2`
   margin: 0px 0 15px 15px;
   text-align: left;
   font-family: AvenirNextBold;
@@ -77,6 +78,8 @@ export default props => (
       </ColorMenu>
       <Label><Sale /></Label>
     </TopRow>
-    <Price color={props.colors[props.currentIndex]}>{props.price}</Price>
+    <PriceWrapper color={props.colors[props.currentIndex]}>
+      <Price price={props.price} currency={props.currency} />
+    </PriceWrapper>
   </Wrapper>
 );
