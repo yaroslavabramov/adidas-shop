@@ -28,8 +28,8 @@ const Img = styled.img`
   &:hover{
     border: 5px solid #e7e7e7;
   }
-  @media screen and (min-width: 768px) {
-    margin-right: 15px;
+  @media screen and (min-width: 992px){
+    width: 7%;
   }
 `;
 

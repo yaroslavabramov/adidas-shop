@@ -19,6 +19,10 @@ const BuyNow = styled.button`
     background-image: linear-gradient(to left, #4949aa, #27275d);
   }
   @media screen and (min-width: 768px){
+    z-index: 0;
+    right: 0;
+    padding-left: 200px;
+    box-sizing: content-box;
     font-size: 32px;
     height: 115px;
   }

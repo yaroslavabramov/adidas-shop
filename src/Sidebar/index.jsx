@@ -8,6 +8,7 @@ import Logo from './images/logo@2x.png';
 import Burger from './images/burger.svg';
 
 const Wrapper = styled.aside`
+  z-index: 1;
   box-sizing: border-box;
   margin:0;
   padding: 0 14px;
