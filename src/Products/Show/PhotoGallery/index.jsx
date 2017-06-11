@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Photobar from './Photobar';
-import linkimg1 from './images/link1@3x.jpg';
-import linkimg2 from './images/link2@3x.jpg';
-import linkimg3 from './images/link3@3x.jpg';
-import linkimg4 from './images/bitmap1@3x.jpg';
-
-const images = [
-  linkimg1,
-  linkimg2,
-  linkimg3,
-  linkimg4,
-];
+import getImageLink from '../../getImageLink';
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,8 +12,8 @@ const Wrapper = styled.div`
 
 const Current = styled.img`
   margin-top: 30px;
-  max-width: 804px;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 `;
 
 export default class Gallery extends Component {
@@ -40,9 +30,16 @@ export default class Gallery extends Component {
   }
 
   render() {
+    const { images } = this.props;
     return (
       <Wrapper>
-        <Current src={images[this.state.currentIndex]} alt="item img" />
+        {
+          images &&
+          <Current
+            src={getImageLink(images[this.state.currentIndex], 512)}
+            alt="item img"
+          />
+        }
         <Photobar
           images={images}
           handleClick={this.handleClick}

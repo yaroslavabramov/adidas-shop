@@ -8,6 +8,7 @@ import Logo from './images/logo@2x.png';
 import Burger from './images/burger.svg';
 
 const Wrapper = styled.aside`
+  z-index: 1;
   box-sizing: border-box;
   margin:0;
   padding: 0 14px;
@@ -16,11 +17,12 @@ const Wrapper = styled.aside`
   background-color: #0e0e0e;
   @media screen and (min-width: 768px){
     padding: 0 22px;
-    width: 327px;
+    width: 34%;
+    max-width: 327px;
     min-height: 1171px;
   }
   @media screen and (min-width: 992px){
-    width: 414px;
+    max-width: 414px;
   }
 `;
 
@@ -77,7 +79,7 @@ export default class Sidebar extends Component {
     return (
       <Wrapper>
         <Header>
-          <LogoLink to="/" />
+          <LogoLink to="/products/football/cleats" />
           <BurgerButton onClick={this.handleClick} ><img src={Burger} alt="" /></BurgerButton>
         </Header>
         <Searchbar isOpened={this.state.isOpened} />

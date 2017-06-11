@@ -2,15 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import SaleLabel from '../../../Components/SaleLabel';
+import SaleLabel from '../../Components/SaleLabel';
+import Price from '../../Components/Price';
 
-const CardWrapper = styled.div`
+const CardWrapper = styled(Link)`
   padding: 9px;
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: #f4f4f4;
   margin-bottom: 24px;
+  transition: all 0.3s;
+  &:hover{
+    background-color: #e0e0e0;
+  }
 `;
 
 const Photo = styled.img`
@@ -19,7 +24,7 @@ const Photo = styled.img`
   width: 100%;
 `;
 
-const Price = styled(Link)`
+const PriceWrapper = styled.div`
   padding: 30px 0;
   font-size: 30px;
   font-family: AvenirNextBold;
@@ -40,12 +45,12 @@ const Label = styled.div`
   right: 17px;
 `;
 
-function Card({ id, price, photo, isSale }) {
+function Card({ url, price, currency, photo, isSale }) {
   return (
-    <CardWrapper>
+    <CardWrapper to={url}>
       {isSale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      <Price to={`shoes/${id}`} isSale={isSale}>${price}</Price>
+      <PriceWrapper><Price price={price} currency={currency} /></PriceWrapper>
     </CardWrapper>
   );
 }

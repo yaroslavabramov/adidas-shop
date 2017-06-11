@@ -1,23 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 import Sale from '../../../Components/SaleLabel';
+import Price from '../../../Components/Price';
 
 const Wrapper = styled.div`
   margin-right: 15px;
   display: flex;
   flex-direction: column-reverse;
   @media screen and (min-width: 768px){
+    margin-left: 30px;
     flex-direction: column;
     margin-right: 30px;
   }
 `;
 
 const TopRow = styled.div`
+  margin-top: 5px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   @media screen and (min-width: 768px){
     flex-direction: row;
+    justify-content: flex-end;
   }
 `;
 
@@ -37,7 +41,7 @@ const Color = styled.button`
   background-color: ${props => props.color};
 `;
 
-const Price = styled.h2`
+const PriceWrapper = styled.h2`
   margin: 0px 0 15px 15px;
   text-align: left;
   font-family: AvenirNextBold;
@@ -74,6 +78,8 @@ export default props => (
       </ColorMenu>
       <Label><Sale /></Label>
     </TopRow>
-    <Price color={props.colors[props.currentIndex]}>170$</Price>
+    <PriceWrapper color={props.colors[props.currentIndex]}>
+      <Price price={props.price} currency={props.currency} />
+    </PriceWrapper>
   </Wrapper>
 );

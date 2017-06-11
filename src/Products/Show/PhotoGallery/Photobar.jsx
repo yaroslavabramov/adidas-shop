@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import getImageLink from '../../getImageLink';
 
 const Menu = styled.div`
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-right: 15px;
@@ -14,8 +18,8 @@ const Img = styled.img`
   cursor: pointer;
   padding: 0;
   margin-right: 10px;
-  max-width: 180px;
-  width: 20%;
+  max-width: 90px;
+  width: 15%;
   border: 5px solid #fff;
   transition: all 0.4s;
   ${props => props.isActive && `
@@ -24,20 +28,20 @@ const Img = styled.img`
   &:hover{
     border: 5px solid #e7e7e7;
   }
-  @media screen and (min-width: 768px) {
-    margin-right: 15px;
+  @media screen and (min-width: 992px){
+    width: 7%;
   }
 `;
 
 export default props => (
   <Menu>
-    {props.images.map((image, index) => (
+    {props.images && props.images.map((image, index) => (
       <Img
-        src={image}
+        src={getImageLink(image, 128)}
         alt=""
         isActive={props.currentIndex === index}
         onClick={() => props.handleClick(index)}
       />
-    ))}
+    )) }
   </Menu>
 );

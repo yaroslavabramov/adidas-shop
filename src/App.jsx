@@ -23,9 +23,9 @@ function App() {
     <Router>
       <Page>
         <Sidebar />
-        <Redirect to="/products/football/shoes" />
         <Route exact path="/products/:group/:type" component={List} />
         <Route exact path="/products/:group/:type/:id" component={Show} />
+        <Redirect to="/products/football/cleats" />
       </Page>
     </Router>
   );
