@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 import { get } from '../../api';
 import Card from './Card';
-import TopPanel from './TopPanel';
 import getImageLink from '../getImageLink';
 
 const Wrapper = styled.main`
@@ -48,7 +47,6 @@ export default class extends Component {
   render() {
     return (
       <Wrapper>
-        <TopPanel />
         <GridWrapper>
           <Row>
             {this.state.products.map(product => (

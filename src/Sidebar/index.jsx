@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-import Searchbar from './Searchbar';
 import Menu from './Menu';
 import Logo from './images/logo@2x.png';
 import Burger from './images/burger.svg';
@@ -82,7 +80,6 @@ export default class Sidebar extends Component {
           <LogoLink to="/products/football/cleats" />
           <BurgerButton onClick={this.handleClick} ><img src={Burger} alt="" /></BurgerButton>
         </Header>
-        <Searchbar isOpened={this.state.isOpened} />
         <Menu isOpened={this.state.isOpened} />
       </Wrapper>
     );

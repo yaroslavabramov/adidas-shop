@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './css/fonts.css';
 
 import Sidebar from './Sidebar';
@@ -23,9 +23,11 @@ function App() {
     <Router>
       <Page>
         <Sidebar />
-        <Route exact path="/products/:group/:type" component={List} />
-        <Route exact path="/products/:group/:type/:id" component={Show} />
-        <Redirect to="/products/football/cleats" />
+        <Switch>
+          <Route exact path="/products/:group/:type" component={List} />
+          <Route exact path="/products/:group/:type/:id" component={Show} />
+          <Redirect from="/" to="/products/football/cleats" />
+        </Switch>
       </Page>
     </Router>
   );
