@@ -50,7 +50,7 @@ function Card({ url, price, currency, photo, isSale }) {
     <CardWrapper to={url}>
       {isSale && <Label><SaleLabel /></Label>}
       <Photo src={photo} alt="item-img" />
-      <PriceWrapper><Price price={price} currency={currency} /></PriceWrapper>
+      <PriceWrapper isSale={isSale} ><Price price={price} currency={currency} /></PriceWrapper>
     </CardWrapper>
   );
 }
